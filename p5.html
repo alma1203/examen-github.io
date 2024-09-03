@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnología</title>
+    <link rel="stylesheet" type="text/css" href="estilos/edgrid.css">
+    <link rel="stylesheet" type="text/css" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/slide.css">
+</head>
+<body>
+
+    <div class="ed-container">
+        <main class="ed-item">
+            <br>
+            <h1 class="negrita">Bienvenidos</h1>
+            <h3 class="centro">"“La ciencia de hoy es la tecnología del mañana”</h3>
+        </main> 
+    </div>
+
+    <div class="ed-container">
+        <div class="ed-item">
+            <p>Sobre tecnología escuchamos hablar casi a diario. A diferencia del concepto de ciencia, la tecnología parecería estar más cercana a nosotros, porque reconocemos que vivimos inmersos en ella permanentemente. Incluso la vemos en espacios nuevos que nos toca recorrer, agilizando los procesos y acortando los tiempos. Y también tenemos noticias de ella cuando se le adjudica la culpa de la distancia entre la gente, su despersonalización y sus efectos no deseables sobre la vida y el medio ambiente. En fin, sabemos de muchos usos de la tecnología: cura pero también mata, educa pero también empobrece el pensamiento, agiliza o complica nuestra vida, acerca y aleja a las personas… Parecería ser que hay posturas tecnofílicas y tecnofóbicas entre las que nos debatimos, al tiempo que vivimos con ella. Esto no es nuevo, porque hay tecnología desde el momento en que el primer homínido tomó un trozo de madera entre sus manos, y lo usó para defender a sus hijos de las bestias o para matar a un vecino para quedarse con sus recursos. Ese pedazo de madera ya era tecnología.</p>
+
+        </div>
+    </div>
+
+    <div class="ed-container">
+        <div class="ed-item">
+            <br>   
+            <h3 class="negrita">Síguenos en nuestras redes sociales</h3>
+        </div>
+        <div class="ed-item redes">
+            <a href="https://www.facebook.com/" target="_blank"><img src="img/fb.png" alt="Facebook"></a>
+        </div>
+        <div class="ed-item redes">
+            <a href="https://wa.me/" target="_blank"><img src="img/WSP.png" alt="WhatsApp"></a>
+        </div>
+        <div class="ed-item redes">
+            <a href="https://www.instagram.com/" target="_blank"><img src="img/ig.png" alt="Instagram"></a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="ed-container">
+            <div class="ed-item">
+                <p class="centro">&copy; 2024 Diseño por Ailynn Montenegro</p>           
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        let slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = i === index ? 'block' : 'none';
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+ 
+    showSlide(currentSlide);
+
+
+    setInterval(nextSlide, 5000);
+
+});
+    </script>
+
+</body>
+</html>
+
